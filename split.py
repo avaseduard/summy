@@ -1,0 +1,1 @@
+# Split long audio files to fit Whisper and ChatGPT limits
