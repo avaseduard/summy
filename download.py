@@ -24,5 +24,5 @@ def download_audio(video_url, output_path):
 
     return audio_filename
 
-# Run
-filename = download_audio('https://www.youtube.com/watch?v=2y45Vv82Wcg', 'output')
+# Test run
+# filename = download_audio('https://www.youtube.com/watch?v=2y45Vv82Wcg', 'output')
