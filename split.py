@@ -1,5 +1,4 @@
-import os
-import librosa
+import os, librosa
 import soundfile as sf
 from find import find_audio_files
 
@@ -23,6 +22,3 @@ def split_audio_file(filename, segment_length, output_dir):
     splitted_audio_files = find_audio_files(output_dir)
     # Return a sorted list of splitted audio files
     return sorted(splitted_audio_files)
-
-# Test run
-# split_audio_file('output/Riding the Cream Machine - Honda\'s Smooth Six.mp3', 600, 'segments')

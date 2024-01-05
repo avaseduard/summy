@@ -9,7 +9,7 @@ load_dotenv()
 client = OpenAI(api_key = os.getenv('OPENAI_API_KEY'))
 
 # Summarize the transcribed text using ChatGPT
-def summarize_text(chunks, output_file=None):
+def summarize_text(chunks, output_file):
     summaries = []
     # Loop through each chunk of text and create a chat using OpenAI's API
     for chunk in chunks:
@@ -31,6 +31,3 @@ def summarize_text(chunks, output_file=None):
                 file.write(summary + '\n')
     # Return the list of summaries
     return summaries
-
-# Test run
-# summarize_text(['text_file'], 'summary')

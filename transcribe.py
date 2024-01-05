@@ -9,7 +9,7 @@ load_dotenv()
 client = OpenAI(api_key = os.getenv('OPENAI_API_KEY'))
 
 # Transcribe the audio files of the video
-def transcribe_audio_files(audio_files, output_file=None):
+def transcribe_audio_files(audio_files, output_file):
     transcripts = []
     # Loop through each audio file
     for audio_file in audio_files:
@@ -30,6 +30,3 @@ def transcribe_audio_files(audio_files, output_file=None):
                 file.write(transcript + '\n')
     # Return the list of transcripts
     return transcripts
-
-# Test run
-# transcribe_audio_files(['segments/segment_0.mp3'], 'text_file')
